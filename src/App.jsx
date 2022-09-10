@@ -87,7 +87,7 @@ function App() {
   const handleAddClose = () => { setOpenAddModal(false) };
 
   const handleSearch = (e) => {
-    const searchdatam = datas.filter(data => data.includes(e.target.value))
+    const searchdatam = datas.filter(data => data.toLowerCase().includes(e.target.value.toLowerCase()))
     setSearchDatas(searchdatam);
     setSearchActive(true);
   }
